@@ -46,23 +46,6 @@ regd_users.post("/login", (req,res) => {
 
 
 
-// regd_users.put("/auth/review/:isbn", (req, res) => {
-//     const isbn = req.params.isbn;
-//     const userReview = req.query.review;
-//     const user = req.session.user
-  
-//     const bookToBeReviewed = Object.values(books).filter(book => book.isbn === isbn);
-//     const reviews = bookToBeReviewed[0].reviews;
-//     reviews.review = userReview;
-//     reviews.username = user;
-//     //Add review to session
-//     req.session.book = bookToBeReviewed;
-    
-//     return res.status(200).json({message: `Review: '${userReview}' was added by '${user}'`, book: bookToBeReviewed});
-//   });
-  
-
-
 // Add a book review
 regd_users.put("/auth/review/:isbn", (req, res) => {
     const isbn = req.params.isbn;
